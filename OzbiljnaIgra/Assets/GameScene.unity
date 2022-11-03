@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 395548335}
   - component: {fileID: 395548334}
   - component: {fileID: 395548333}
-  - component: {fileID: 395548337}
+  - component: {fileID: 395548343}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -343,7 +343,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &395548337
+--- !u!114 &395548343
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd4f43564be7ae4087b37c8b00553d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 3393101129559565076, guid: ec2ef7bba38be994a8574179ffd3ea06, type: 3}
+  car: {fileID: 3393101129559565076, guid: c6e47d343572b1047981e925a162caa3, type: 3}
   respawnTime: 1
 --- !u!1 &401589269
 GameObject:
@@ -1253,6 +1253,7 @@ GameObject:
   - component: {fileID: 1949151410}
   - component: {fileID: 1949151409}
   - component: {fileID: 1949151413}
+  - component: {fileID: 1949151414}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -1389,8 +1390,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.95, y: 1.3}
+  m_Size: {x: 0.75, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1949151414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949151408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff085f01c24ec74491533c2d069c588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1960667297
 GameObject:
   m_ObjectHideFlags: 0

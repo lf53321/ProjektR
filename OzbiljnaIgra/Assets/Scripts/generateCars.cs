@@ -19,7 +19,7 @@ public class generateCars : MonoBehaviour
     private void generateCar()
     {
         GameObject gameCar = Instantiate(car) as GameObject;
-        gameCar.transform.position = new Vector2(Random.Range(screenBounds.x/2 - 7, screenBounds.x/2 - 2), screenBounds.y);
+        gameCar.transform.position = new Vector2(Random.Range(-3, 2.95f), screenBounds.y);
 
     }
 
