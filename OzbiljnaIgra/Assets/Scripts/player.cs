@@ -29,7 +29,7 @@ public class player : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         time += Time.deltaTime;
-        textMeshProUGUI.text = "Time: " + time.ToString("0.0");
+        textMeshProUGUI.text = "Time: " + time.ToString("0.0").Replace(',','.');
 
     }
 
@@ -41,7 +41,7 @@ public class player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("hit");
-        screenScript.gameOver();
+        screenScript.gameOver(time);
         gameObject.SetActive(false);
         Time.timeScale = 0;
     }

@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ScreenScript : MonoBehaviour
 {
     public GameObject screen;
+
+    public TextMeshProUGUI textMeshProUGUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +28,10 @@ public class ScreenScript : MonoBehaviour
         }
     }
 
-    public void gameOver()
+    public void gameOver(float score)
     {
         screen.SetActive(true);
+        textMeshProUGUI.text = score.ToString("0.0").Replace(',','.');
     }
 
     public void restart()
