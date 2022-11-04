@@ -39,8 +39,10 @@ public class ScreenScript : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    // The method opens the main menu rather than quitting the application.
     public void quit()
     {
-        Application.Quit();
+        string menu = "Menu";
+        SceneManager.LoadScene(menu);
     }
 }
