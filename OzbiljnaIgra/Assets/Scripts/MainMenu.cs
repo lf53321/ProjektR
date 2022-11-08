@@ -12,8 +12,9 @@ public class MainMenu : MonoBehaviour {
     public AudioMixer audioMixer;
 
     void Start() {
+        // set default volume value if there is none in the PlayerPrefs
         if(!PlayerPrefs.HasKey("VolumeValue")) {
-            PlayerPrefs.SetFloat("VolumeValue", 0);
+            PlayerPrefs.SetFloat("VolumeValue", -40);
             LoadVolume();
         } else {
             LoadVolume();
