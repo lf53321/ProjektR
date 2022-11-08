@@ -2,8 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
+
+    [SerializeField] Slider volumeSlider;
+
+    public AudioMixer audioMixer;
+
+    void Start() {
+        if(!PlayerPrefs.HasKey("VolumeValue")) {
+            PlayerPrefs.SetFloat("VolumeValue", 0);
+            LoadVolume();
+        } else {
+            LoadVolume();
+        }
+    }
+
     public void PlayGame () {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
@@ -17,5 +33,18 @@ public class MainMenu : MonoBehaviour {
     public void LoadGame() {
         // TODO implement
         Debug.Log("Not yet implemented...");
+    }
+
+    public void SetVolume(float volume) {
+        audioMixer.SetFloat("volume", volume);
+        SaveVolume();
+    }
+
+    void LoadVolume() {
+        volumeSlider.value = PlayerPrefs.GetFloat("VolumeValue");
+    }
+
+    void SaveVolume() {
+        PlayerPrefs.SetFloat("VolumeValue", volumeSlider.value);
     }
 }
