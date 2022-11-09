@@ -7,8 +7,10 @@ public class player : MonoBehaviour
 {
 
     public float moveSpeed = 5f;
+    public float powerValue = 100f;
 
-    public TextMeshProUGUI textMeshProUGUI;
+    public TextMeshProUGUI timeText;
+    public TextMeshProUGUI powerText;
 
     public float time = 0f;
 
@@ -20,6 +22,7 @@ public class player : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        InvokeRepeating("PowerUpdate", 0f, 1f);
     }
 
     public ScreenScript screenScript;
@@ -29,7 +32,7 @@ public class player : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         time += Time.deltaTime;
-        textMeshProUGUI.text = "Time: " + time.ToString("0.0").Replace(',','.');
+        timeText.text = "Time: " + time.ToString("0.0").Replace(',','.');
 
     }
 
@@ -38,11 +41,40 @@ public class player : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
+    void PowerUpdate()
+    {
+        if (powerValue <= 0f)
+        {
+            screenScript.gameOver(time);
+            gameObject.SetActive(false);
+            Time.timeScale = 0;
+        }
+        powerText.text = --powerValue + "%";
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("hit");
-        screenScript.gameOver(time);
-        gameObject.SetActive(false);
-        Time.timeScale = 0;
+
+        if (!collision.gameObject.name.Equals("PowerStation(Clone)"))
+        {
+            Debug.Log("hit");
+            Debug.Log(collision.gameObject.name);
+            screenScript.gameOver(time);
+            gameObject.SetActive(false);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            collision.gameObject.SetActive(false);
+            if (powerValue <= 70f)
+            {
+                powerValue += 30;
+            }
+            else
+            {
+                powerValue = 100f;
+            }
+            time += 5f;
+        }
     }
 }

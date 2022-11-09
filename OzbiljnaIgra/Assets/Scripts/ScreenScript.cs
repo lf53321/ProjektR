@@ -21,15 +21,17 @@ public class ScreenScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.activeInHierarchy)
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
+        //if (gameObject.activeInHierarchy)
+        //{
+        //    Cursor.visible = true;
+          //  Cursor.lockState = CursorLockMode.None;
+        //}
     }
 
     public void gameOver(float score)
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         screen.SetActive(true);
         textMeshProUGUI.text = score.ToString("0.0").Replace(',','.');
     }
