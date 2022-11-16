@@ -2,15 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour
 {
 
+    public float maxSpeed = 7f;
+    public float minSpeed = 5f;
     public float moveSpeed = 5f;
-    public float powerValue = 100f;
+    public float powerValue = 58.0f;
+    public float distanceValue = 0f;
+    public float speedValue = 60f;
+    public float consumptionValue = 20f;
+    public float minConsumption = 20f;
 
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI powerText;
+    public TextMeshProUGUI distanceText;
+    public TextMeshProUGUI speedText;
+    public TextMeshProUGUI consumptionText;
 
     public float time = 0f;
 
@@ -22,7 +32,13 @@ public class player : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        powerValue = 58.0f;
+        distanceText.text = distanceValue.ToString() + "/100km";
+        speedText.text = speedValue.ToString() + "km/h";
+        consumptionText.text = consumptionValue.ToString() + "kWh";
         InvokeRepeating("PowerUpdate", 0f, 1f);
+        InvokeRepeating("DistanceUpdate", 0f, 1f);
+        InvokeRepeating("SpeedUpdate", 0f, 0.125f);
     }
 
     public ScreenScript screenScript;
@@ -32,7 +48,7 @@ public class player : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         time += Time.deltaTime;
-        timeText.text = "Time: " + time.ToString("0.0").Replace(',','.');
+        timeText.text = time.ToString("0.0").Replace(',','.') + " min";
 
     }
 
@@ -49,7 +65,43 @@ public class player : MonoBehaviour
             gameObject.SetActive(false);
             Time.timeScale = 0;
         }
-        powerText.text = --powerValue + "%";
+        powerValue -= consumptionValue / 60;
+        powerText.text = string.Format("{0:F1}", powerValue) + " kWh";
+    }
+    
+    void DistanceUpdate()
+    {
+        if (distanceValue >= 100f)
+        {
+            screenScript.gameOver(time);
+            gameObject.SetActive(false);
+            Time.timeScale = 0;
+        }
+        distanceValue += speedValue / 60;
+        distanceText.text = string.Format("{0:F1}", distanceValue) + "/100km";
+    }
+
+    void SpeedUpdate()
+    {
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            if (moveSpeed < maxSpeed)
+            {
+                moveSpeed += 0.5f;
+                consumptionValue += 5f;
+            }
+        }
+        else if (moveSpeed > minSpeed)
+        {
+            moveSpeed -= 0.25f;
+        }
+        if (consumptionValue > minConsumption)
+        {
+            consumptionValue -= 1f;
+        }
+        speedValue = moveSpeed * 20;
+        speedText.text = speedValue.ToString() + "km/h";
+        consumptionText.text = consumptionValue.ToString() + "kWh";
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -66,13 +118,13 @@ public class player : MonoBehaviour
         else
         {
             collision.gameObject.SetActive(false);
-            if (powerValue <= 70f)
+            if (powerValue <= 28.0f)
             {
                 powerValue += 30;
             }
             else
             {
-                powerValue = 100f;
+                powerValue = 58.0f;
             }
             time += 5f;
         }
