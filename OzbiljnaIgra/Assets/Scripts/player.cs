@@ -12,9 +12,11 @@ public class player : MonoBehaviour
     public float moveSpeed = 5f;
     public float powerValue = 58.0f;
     public float distanceValue = 0f;
+    public float distanceThreshold = 113f;
     public float speedValue = 60f;
     public float consumptionValue = 20f;
     public float minConsumption = 20f;
+    public float maxConsumption = 35f;
 
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI powerText;
@@ -71,14 +73,14 @@ public class player : MonoBehaviour
     
     void DistanceUpdate()
     {
-        if (distanceValue >= 100f)
+        if (distanceValue >= distanceThreshold)
         {
-            screenScript.gameOver(time);
+            screenScript.gameOver(powerValue * distanceValue - time);
             gameObject.SetActive(false);
             Time.timeScale = 0;
         }
         distanceValue += speedValue / 60;
-        distanceText.text = string.Format("{0:F1}", distanceValue) + "/100km";
+        distanceText.text = string.Format("{0:F0}", distanceValue) + "/" + distanceThreshold +"km";
     }
 
     void SpeedUpdate()
@@ -88,6 +90,9 @@ public class player : MonoBehaviour
             if (moveSpeed < maxSpeed)
             {
                 moveSpeed += 0.5f;
+            }
+            if(consumptionValue < maxConsumption)
+            {
                 consumptionValue += 5f;
             }
         }
@@ -111,7 +116,7 @@ public class player : MonoBehaviour
         {
             Debug.Log("hit");
             Debug.Log(collision.gameObject.name);
-            screenScript.gameOver(time);
+            screenScript.gameOver(powerValue*distanceValue - distanceThreshold - time);
             gameObject.SetActive(false);
             Time.timeScale = 0;
         }
