@@ -4,12 +4,23 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour {
 
     [SerializeField] Slider volumeSlider;
 
     public AudioMixer audioMixer;
+
+    private string city = "CityLevelButton";
+    private string country = "CountrysideLevelButton";
+    private string snow = "SnowLevelButton";
+    private string quiz = "QuizLevelButton";
+
+    private int citySceneNumber = 1;
+    private int countrySceneNumber = 2;
+    private int snowSceneNumber = 3;
+    private int quizSceneNumber = 4;
 
     void Start() {
         // set default volume value if there is none in the PlayerPrefs
@@ -31,11 +42,6 @@ public class MainMenu : MonoBehaviour {
         Application.Quit();
     }
 
-    public void LoadGame() {
-        // TODO implement
-        Debug.Log("Not yet implemented...");
-    }
-
     public void SetVolume(float volume) {
         audioMixer.SetFloat("volume", volume);
         SaveVolume();
@@ -47,5 +53,24 @@ public class MainMenu : MonoBehaviour {
 
     void SaveVolume() {
         PlayerPrefs.SetFloat("VolumeValue", volumeSlider.value);
+    }
+
+    public void LoadGame() {
+        
+        string buttonName = EventSystem.current.currentSelectedGameObject.name;
+        Debug.Log(buttonName);
+
+        if (buttonName == city) {
+            SceneManager.LoadScene(citySceneNumber);
+
+        } else if (buttonName == country) {
+            SceneManager.LoadScene(countrySceneNumber);
+
+        } else if (buttonName == snow) {
+            SceneManager.LoadScene(snowSceneNumber);
+        
+        } else if (buttonName == quiz) {
+            SceneManager.LoadScene(quizSceneNumber);
+        }
     }
 }
