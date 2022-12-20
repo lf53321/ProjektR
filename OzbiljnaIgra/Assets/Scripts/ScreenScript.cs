@@ -47,4 +47,8 @@ public class ScreenScript : MonoBehaviour
         string menu = "Menu";
         SceneManager.LoadScene(menu);
     }
+
+    public void next() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
