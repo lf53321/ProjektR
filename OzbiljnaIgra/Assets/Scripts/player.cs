@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+
 public class player : MonoBehaviour
 {
 
@@ -24,6 +25,8 @@ public class player : MonoBehaviour
     public TextMeshProUGUI speedText;
     public TextMeshProUGUI consumptionText;
 
+    modalWindows modalniProzor;
+
     public float time = 0f;
 
     public Rigidbody2D rb;
@@ -33,7 +36,7 @@ public class player : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 0;
         powerValue = 58.0f;
         distanceText.text = distanceValue.ToString() + "/100km";
         speedText.text = speedValue.ToString() + "km/h";
@@ -41,7 +44,12 @@ public class player : MonoBehaviour
         InvokeRepeating("PowerUpdate", 0f, 1f);
         InvokeRepeating("DistanceUpdate", 0f, 1f);
         InvokeRepeating("SpeedUpdate", 0f, 0.125f);
+
+        try{
+        modalniProzor = GameObject.FindGameObjectWithTag("tagModalniProzor").GetComponent<modalWindows>();
+        modalniProzor.pokreniIntroduction();} catch{    }
     }
+   
 
     public ScreenScript screenScript;
     // Update is called once per frame

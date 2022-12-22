@@ -9,13 +9,16 @@ public class ScreenScript : MonoBehaviour
     public GameObject screen;
 
     public TextMeshProUGUI textMeshProUGUI;
+    public GameObject modalWindowActive;
 
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked; 
-
+        if(!modalWindowActive.activeSelf || (modalWindowActive == null)){
+            Time.timeScale = 1;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked; 
+        }
     }
 
     // Update is called once per frame

@@ -1121,7 +1121,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -44.62001, y: -26.140001}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &329268652
 MonoBehaviour:
@@ -1347,6 +1347,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerStation: {fileID: 3393101129559565076, guid: 86c940be9e1834945bd7078dd95619ef, type: 3}
+  prozorZaBateriju: 0
+  modalPowerStation: {fileID: 2139109227}
+  backgroundPanel: {fileID: 1623794967}
 --- !u!1 &401589269
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,10 +2062,10 @@ RectTransform:
   m_Father: {fileID: 1404453665}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 395.19, y: -35.885}
-  m_SizeDelta: {x: 790.38, y: 71.77}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 790.38, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &603760016
 MonoBehaviour:
@@ -3064,7 +3067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &832803127
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3882,9 +3885,10 @@ GameObject:
   - component: {fileID: 1041088928}
   - component: {fileID: 1041088927}
   - component: {fileID: 1041088926}
+  - component: {fileID: 1041088929}
   m_Layer: 5
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: tagModalniProzor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3905,9 +3909,9 @@ RectTransform:
   m_Father: {fileID: 1386269994}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.137}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 390.19, y: -25.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 236.63, y: 50.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1041088926
@@ -3953,7 +3957,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1041088927}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1041088929}
+        m_TargetAssemblyTypeName: modalWindows, Assembly-CSharp
+        m_MethodName: pokreniStats
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1041088927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3992,6 +4008,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041088924}
   m_CullTransparentMesh: 1
+--- !u!114 &1041088929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041088924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e89e1941cdbd4b4190d32f05b896cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundPanel: {fileID: 1623794967}
+  modalIntroduction: {fileID: 832803126}
+  modalStatistics: {fileID: 1447176213}
+  modalGoal: {fileID: 0}
+  modalPowerStation: {fileID: 0}
 --- !u!1 &1047785473
 GameObject:
   m_ObjectHideFlags: 0
@@ -4215,6 +4248,7 @@ GameObject:
   - component: {fileID: 1079260927}
   - component: {fileID: 1079260926}
   - component: {fileID: 1079260925}
+  - component: {fileID: 1079260928}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -4286,7 +4320,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1079260926}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1079260928}
+        m_TargetAssemblyTypeName: modalWindows, Assembly-CSharp
+        m_MethodName: pokreniGoal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1079260926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4325,6 +4371,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079260923}
   m_CullTransparentMesh: 1
+--- !u!114 &1079260928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079260923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e89e1941cdbd4b4190d32f05b896cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundPanel: {fileID: 0}
+  modalIntroduction: {fileID: 0}
+  modalStatistics: {fileID: 1447176213}
+  modalGoal: {fileID: 134785940}
+  modalPowerStation: {fileID: 0}
 --- !u!1 &1096021843
 GameObject:
   m_ObjectHideFlags: 0
@@ -5117,10 +5180,10 @@ RectTransform:
   m_Father: {fileID: 832803127}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 395.19, y: -216.66501}
-  m_SizeDelta: {x: 780.38, y: 244.21}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 244.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1297393830
 MonoBehaviour:
@@ -5533,10 +5596,10 @@ RectTransform:
   m_Father: {fileID: 832803127}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 395.19, y: -379.3367}
-  m_SizeDelta: {x: 780.38, y: 54.08}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 54.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1386269995
 MonoBehaviour:
@@ -5680,10 +5743,10 @@ RectTransform:
   m_Father: {fileID: 832803127}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 395.19, y: -45.148335}
-  m_SizeDelta: {x: 790.38, y: 71.77}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 71.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1404453666
 MonoBehaviour:
@@ -6280,7 +6343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.020050049, y: 0}
+  m_AnchoredPosition: {x: 0.020019531, y: 0}
   m_SizeDelta: {x: 0.040039, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1623794969
@@ -6793,9 +6856,10 @@ GameObject:
   - component: {fileID: 1779920983}
   - component: {fileID: 1779920982}
   - component: {fileID: 1779920981}
+  - component: {fileID: 1779920984}
   m_Layer: 5
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: tagBaterijaButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6864,7 +6928,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1779920982}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1779920984}
+        m_TargetAssemblyTypeName: GeneratePowerStation, Assembly-CSharp
+        m_MethodName: startIgre
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1779920982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6903,6 +6979,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1779920979}
   m_CullTransparentMesh: 1
+--- !u!114 &1779920984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779920979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e392f90de4ec3d54098def903e6ca4a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerStation: {fileID: 3393101129559565076, guid: 86c940be9e1834945bd7078dd95619ef, type: 3}
+  prozorZaBateriju: 0
+  modalPowerStation: {fileID: 2139109227}
+  backgroundPanel: {fileID: 1623794967}
 --- !u!1 &1780703651
 GameObject:
   m_ObjectHideFlags: 0
@@ -7067,6 +7159,7 @@ GameObject:
   - component: {fileID: 1857246032}
   - component: {fileID: 1857246031}
   - component: {fileID: 1857246030}
+  - component: {fileID: 1857246033}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -7138,7 +7231,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1857246031}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1857246033}
+        m_TargetAssemblyTypeName: modalWindows, Assembly-CSharp
+        m_MethodName: startIgre
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1857246031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7177,6 +7282,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857246028}
   m_CullTransparentMesh: 1
+--- !u!114 &1857246033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857246028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e89e1941cdbd4b4190d32f05b896cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundPanel: {fileID: 1623794967}
+  modalIntroduction: {fileID: 0}
+  modalStatistics: {fileID: 0}
+  modalGoal: {fileID: 134785940}
+  modalPowerStation: {fileID: 2139109227}
 --- !u!1 &1936023072
 GameObject:
   m_ObjectHideFlags: 0
@@ -7449,6 +7571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screen: {fileID: 1404171794}
   textMeshProUGUI: {fileID: 992222510}
+  modalWindowActive: {fileID: 1623794967}
 --- !u!4 &1960667299
 Transform:
   m_ObjectHideFlags: 0
