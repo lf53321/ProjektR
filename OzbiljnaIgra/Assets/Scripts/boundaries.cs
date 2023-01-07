@@ -7,8 +7,6 @@ public class boundaries : MonoBehaviour
     private Vector2 screenBounds;
     private float objectWidth;
     private float objectHeight;
-    public Player player;
-    public backgroundScript backgroundScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,17 +18,8 @@ public class boundaries : MonoBehaviour
 
     void LateUpdate()
     {
-        GameObject gameObject = GameObject.Find("PowerStation(Clone)");
         Vector3 viewPos = transform.position;
-        if (gameObject != null)
-        {
-            viewPos.x = Mathf.Clamp(viewPos.x, -4.5f + objectWidth, 4.45f - objectWidth);
-        }
-        else if (player.moveSpeed > 3f)
-        {
-            viewPos.x = Mathf.Clamp(viewPos.x, -3f + objectWidth, 2.95f - objectWidth);
-        }
-        backgroundScript.scroolSpeed = player.moveSpeed * 2;
+        viewPos.x = Mathf.Clamp(viewPos.x, -3 + objectWidth, 2.95f - objectWidth);
         viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y * -1 + objectHeight, screenBounds.y - objectHeight);
         transform.position = viewPos;
     }

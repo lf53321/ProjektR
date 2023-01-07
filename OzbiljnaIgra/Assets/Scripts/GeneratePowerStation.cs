@@ -18,7 +18,7 @@ public class GeneratePowerStation : MonoBehaviour
     {
         respawnTime = Random.Range(10f, 25f);
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        StartCoroutine(powerStations());
+        StartCoroutine(cars());
     }
 
     private void generatePowerStation()
@@ -26,23 +26,11 @@ public class GeneratePowerStation : MonoBehaviour
         GameObject pwrStation = Instantiate(powerStation) as GameObject;
         int lucky = Random.Range(0, 10);
         if (lucky <= 5)
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-        {
-            pwrStation.transform.position = new Vector2(-4f, screenBounds.y);
-        } else pwrStation.transform.position = new Vector2(3.95f, screenBounds.y);
-=======
->>>>>>> Stashed changes
         {   
             pwrStation.transform.position = new Vector2(-3f, screenBounds.y);
         } else {
             pwrStation.transform.position = new Vector2(2.95f, screenBounds.y);
             }
-<<<<<<< Updated upstream
-=======
->>>>>>> 4305cde8ff12956a7c65fa8b3a3fd8a4323df099
->>>>>>> Stashed changes
     }
     
     public void startIgre(){
@@ -53,7 +41,7 @@ public class GeneratePowerStation : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked; 
         }
 
-    IEnumerator powerStations()
+    IEnumerator cars()
     {
         while (true)
         {
