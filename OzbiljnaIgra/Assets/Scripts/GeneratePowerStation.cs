@@ -25,12 +25,12 @@ public class GeneratePowerStation : MonoBehaviour
     {
         GameObject pwrStation = Instantiate(powerStation) as GameObject;
         int lucky = Random.Range(0, 10);
+
         if (lucky <= 5)
-        {   
-            pwrStation.transform.position = new Vector2(-3f, screenBounds.y);
-        } else {
-            pwrStation.transform.position = new Vector2(2.95f, screenBounds.y);
-            }
+        {
+            pwrStation.transform.position = new Vector2(-4f, screenBounds.y);
+        }
+        else pwrStation.transform.position = new Vector2(3.95f, screenBounds.y);
     }
     
     public void startIgre(){

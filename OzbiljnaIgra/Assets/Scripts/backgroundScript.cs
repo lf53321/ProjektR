@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class backgroundScript : MonoBehaviour
 {
-    [Range(-10f,10f)]
+    [Range(-15f,15f)]
     public float scroolSpeed = 0.5f;
     private float offset;
     private Material mat;

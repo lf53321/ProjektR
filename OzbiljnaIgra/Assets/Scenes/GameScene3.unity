@@ -5822,7 +5822,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 45
+      scalar: 145
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -12094,7 +12094,7 @@ MonoBehaviour:
   distanceValue: 0
   distanceThreshold: 163
   speedValue: 100
-  consumptionValue: 20
+  consumptionValue: 24
   minConsumption: 24
   maxConsumption: 35
   timeText: {fileID: 1023055590}
@@ -12210,6 +12210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff085f01c24ec74491533c2d069c588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1949151410}
+  backgroundScript: {fileID: 1591284115}
 --- !u!1 &1960667297
 GameObject:
   m_ObjectHideFlags: 0

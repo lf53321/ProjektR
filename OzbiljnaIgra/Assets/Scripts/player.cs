@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 
 
-public class player : MonoBehaviour
+public class Player : MonoBehaviour
 {
 
     public float maxSpeed = 7f;
@@ -99,22 +99,43 @@ public class player : MonoBehaviour
             {
                 moveSpeed += 0.5f;
             }
-            if(consumptionValue < maxConsumption)
+            if (consumptionValue < maxConsumption)
             {
                 consumptionValue += 5f;
             }
         }
         else if (moveSpeed > minSpeed)
         {
-            moveSpeed -= 0.25f;
+            moveSpeed -= 0.1f;
+            if (moveSpeed < minSpeed) moveSpeed = minSpeed;
         }
         if (consumptionValue > minConsumption)
         {
-            consumptionValue -= 1f;
+            consumptionValue -= 0.25f;
+        }
+        if (moveSpeed < minSpeed && moveSpeed != 0)
+        {
+            moveSpeed += 0.1f;
+            consumptionValue += 1f;
         }
         speedValue = moveSpeed * 20;
-        speedText.text = speedValue.ToString() + "km/h";
-        consumptionText.text = consumptionValue.ToString() + "kWh";
+        speedText.text = string.Format("{0:F0}", speedValue) + "km/h";
+        consumptionText.text = string.Format("{0:F0}", consumptionValue) + "kWh";
+    }
+
+    void Charging()
+    {
+        if (powerValue <= 52.0f)
+        {
+            powerValue += 6;
+        }
+        else
+        {
+            powerValue = 58.0f;
+            time += 1f;
+            CancelInvoke("Charging");
+        }
+        time += 1f;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -124,22 +145,25 @@ public class player : MonoBehaviour
         {
             Debug.Log("hit");
             Debug.Log(collision.gameObject.name);
-            screenScript.gameOver(powerValue*distanceValue - distanceThreshold - time);
+            screenScript.gameOver(powerValue * distanceValue - distanceThreshold - time);
             gameObject.SetActive(false);
             Time.timeScale = 0;
         }
         else
         {
+            moveSpeed = 0f;
+            consumptionValue = 0f;
+            // if (powerValue <= 28.0f)
+            // {
+            //     powerValue += 30;
+            // }
+            // else
+            // {
+            //     powerValue = 58.0f;
+            // }
+            // time += 5f;
+            InvokeRepeating("Charging", 0, 1f);
             collision.gameObject.SetActive(false);
-            if (powerValue <= 28.0f)
-            {
-                powerValue += 30;
-            }
-            else
-            {
-                powerValue = 58.0f;
-            }
-            time += 5f;
         }
     }
 }
