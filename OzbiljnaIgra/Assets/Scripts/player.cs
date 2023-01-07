@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
+
+<<<<<<< HEAD
+public class Player : MonoBehaviour
+=======
 
 
 public class player : MonoBehaviour
+>>>>>>> 4305cde8ff12956a7c65fa8b3a3fd8a4323df099
 {
-
     public float maxSpeed = 7f;
     public float minSpeed = 5f;
     public float moveSpeed = 5f;
@@ -28,6 +33,8 @@ public class player : MonoBehaviour
     modalWindows modalniProzor;
 
     public float time = 0f;
+
+    public backgroundScript backgroundScript;
 
     public Rigidbody2D rb;
 
@@ -57,6 +64,7 @@ public class player : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        backgroundScript.scroolSpeed = moveSpeed * 2;
         time += Time.deltaTime;
         timeText.text = time.ToString("0.0").Replace(',','.') + " min";
 
@@ -106,15 +114,36 @@ public class player : MonoBehaviour
         }
         else if (moveSpeed > minSpeed)
         {
-            moveSpeed -= 0.25f;
+            moveSpeed -= 0.1f;
+            if (moveSpeed < minSpeed) moveSpeed = minSpeed;
         }
         if (consumptionValue > minConsumption)
         {
-            consumptionValue -= 1f;
+            consumptionValue -= 0.25f;
+        }
+        if(moveSpeed < minSpeed && moveSpeed != 0)
+        {
+            moveSpeed += 0.1f;
+            consumptionValue += 1f;
         }
         speedValue = moveSpeed * 20;
-        speedText.text = speedValue.ToString() + "km/h";
-        consumptionText.text = consumptionValue.ToString() + "kWh";
+        speedText.text = string.Format("{0:F0}", speedValue) + "km/h";
+        consumptionText.text = string.Format("{0:F0}", consumptionValue) + "kWh";
+    }
+
+    void Charging()
+    {
+        if (powerValue <= 52.0f)
+        {
+            powerValue += 6;
+        }
+        else
+        {
+            powerValue = 58.0f;
+            time += 1f;
+            CancelInvoke("Charging");
+        }
+        time += 1f;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -130,16 +159,19 @@ public class player : MonoBehaviour
         }
         else
         {
+            moveSpeed = 0f;
+            consumptionValue = 0f;
+           // if (powerValue <= 28.0f)
+           // {
+           //     powerValue += 30;
+           // }
+           // else
+           // {
+           //     powerValue = 58.0f;
+           // }
+           // time += 5f;
+            InvokeRepeating("Charging", 0, 1f);
             collision.gameObject.SetActive(false);
-            if (powerValue <= 28.0f)
-            {
-                powerValue += 30;
-            }
-            else
-            {
-                powerValue = 58.0f;
-            }
-            time += 5f;
         }
     }
 }
