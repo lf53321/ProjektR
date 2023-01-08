@@ -24,6 +24,10 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI distanceText;
     public TextMeshProUGUI speedText;
     public TextMeshProUGUI consumptionText;
+    public TextMeshProUGUI chargingText;
+
+    public GameObject chargingBackgroundImage;
+    public GeneratePowerStation generatePowerStation;
 
     modalWindows modalniProzor;
 
@@ -93,6 +97,12 @@ public class Player : MonoBehaviour
 
     void SpeedUpdate()
     {
+        if(moveSpeed != 0 && chargingBackgroundImage.activeInHierarchy)
+        {
+            generatePowerStation.respawnTime = Random.Range(15f, 30f);
+            chargingBackgroundImage.SetActive(false);
+            chargingText.text = "";
+        }
         if (Input.GetKey(KeyCode.UpArrow))
         {
             if (moveSpeed < maxSpeed)
@@ -127,15 +137,18 @@ public class Player : MonoBehaviour
     {
         if (powerValue <= 52.0f)
         {
+            chargingBackgroundImage.SetActive(true);
+            chargingText.text = "Charging!";
             powerValue += 6;
         }
         else
         {
             powerValue = 58.0f;
-            time += 1f;
+            time += 5f;
+            chargingText.text = "Fully charged!";
             CancelInvoke("Charging");
         }
-        time += 1f;
+        time += 5f;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -151,17 +164,10 @@ public class Player : MonoBehaviour
         }
         else
         {
+            transform.position = collision.transform.position;
             moveSpeed = 0f;
             consumptionValue = 0f;
-            // if (powerValue <= 28.0f)
-            // {
-            //     powerValue += 30;
-            // }
-            // else
-            // {
-            //     powerValue = 58.0f;
-            // }
-            // time += 5f;
+            generatePowerStation.respawnTime = 1000f;
             InvokeRepeating("Charging", 0, 1f);
             collision.gameObject.SetActive(false);
         }

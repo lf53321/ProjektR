@@ -6,12 +6,14 @@ public class GeneratePowerStation : MonoBehaviour
 {
 
     public GameObject powerStation;
-    private float respawnTime;
+    public float respawnTime;
     private Vector2 screenBounds;
     public bool prozorZaBateriju = false;
 
     public GameObject modalPowerStation;
     public GameObject backgroundPanel;
+
+    public Player player;
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +59,7 @@ public class GeneratePowerStation : MonoBehaviour
             }} catch{
             }
 
+            if (player.moveSpeed == 0) continue;
             generatePowerStation();
         }
     }

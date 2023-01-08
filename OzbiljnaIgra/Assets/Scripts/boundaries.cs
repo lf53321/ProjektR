@@ -24,7 +24,14 @@ public class boundaries : MonoBehaviour
         Vector3 viewPos = transform.position;
         if (gameObject != null)
         {
-            viewPos.x = Mathf.Clamp(viewPos.x, -4.5f + objectWidth, 4.45f - objectWidth);
+            if (gameObject.transform.position.x < 0)
+            {
+                viewPos.x = Mathf.Clamp(viewPos.x, -4.5f + objectWidth, 2.95f - objectWidth);
+            }
+            else
+            {
+                viewPos.x = Mathf.Clamp(viewPos.x, -3f + objectWidth, 4.45f - objectWidth);
+            }
         }
         else if (player.moveSpeed > 3f)
         {
