@@ -5,12 +5,17 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class MainMenu : MonoBehaviour {
 
     [SerializeField] Slider volumeSlider;
 
     public AudioMixer audioMixer;
+
+    public Toggle simplifiedToggle;
+
+    public TMP_Dropdown languageDropdown;
 
     private string city = "CityLevelButton";
     private string country = "CountrysideLevelButton";
@@ -29,6 +34,18 @@ public class MainMenu : MonoBehaviour {
             LoadVolume();
         } else {
             LoadVolume();
+        }
+
+        if(PlayerPrefs.HasKey("Simplified") && PlayerPrefs.GetFloat("Simplified") == 1) {
+            simplifiedToggle.isOn = true;
+        } else {
+             simplifiedToggle.isOn = false;
+        }
+
+        if(PlayerPrefs.HasKey("Language") && PlayerPrefs.GetString("Language") == "HR") {
+            languageDropdown.value = 1;
+        } else {
+            languageDropdown.value = 0;
         }
     }
 
@@ -71,6 +88,24 @@ public class MainMenu : MonoBehaviour {
         
         } else if (buttonName == quiz) {
             SceneManager.LoadScene(quizSceneNumber);
+        }
+    }
+
+    public void SetSimplified(bool isSimplified) {
+        if(isSimplified) {
+            PlayerPrefs.SetFloat("Simplified", 1);
+        } else {
+            PlayerPrefs.SetFloat("Simplified", 0);
+        }
+    }
+
+    public void HandleInputData(int val) {
+        if(val == 0) {
+            Debug.Log("EN");
+            PlayerPrefs.SetString("Language", "EN");
+        } else if (val == 1) {
+            Debug.Log("HR");
+            PlayerPrefs.SetString("Language", "HR");
         }
     }
 }

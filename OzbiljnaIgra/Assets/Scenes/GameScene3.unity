@@ -12307,12 +12307,12 @@ MonoBehaviour:
   maxSpeed: 7
   minSpeed: 5
   moveSpeed: 5
-  powerValue: 100
+  powerValue: 58
   distanceValue: 0
-  distanceThreshold: 163
-  speedValue: 100
-  consumptionValue: 24
-  minConsumption: 24
+  distanceThreshold: 113
+  speedValue: 60
+  consumptionValue: 20
+  minConsumption: 20
   maxConsumption: 35
   timeText: {fileID: 1023055590}
   powerText: {fileID: 1258068689}

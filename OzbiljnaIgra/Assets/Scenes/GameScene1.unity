@@ -6530,6 +6530,7 @@ GameObject:
   - component: {fileID: 1623794968}
   - component: {fileID: 1623794970}
   - component: {fileID: 1623794969}
+  - component: {fileID: 1623794971}
   m_Layer: 5
   m_Name: ModalWindowPanel
   m_TagString: Untagged
@@ -6599,6 +6600,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623794967}
   m_CullTransparentMesh: 1
+--- !u!114 &1623794971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623794967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c9e230785f0eea4d8fa872c5462158a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introductionContent: {fileID: 1297393830}
+  statisticsContent: {fileID: 1332310511}
+  goalContent: {fileID: 951551700}
+  chargingStationContent: {fileID: 1233281383}
 --- !u!1 &1633644875
 GameObject:
   m_ObjectHideFlags: 0

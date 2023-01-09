@@ -10,7 +10,6 @@ public class modalWindows : MonoBehaviour
     public GameObject modalGoal;
     public GameObject modalPowerStation;
 
-
      public void pokreniIntroduction(){
         backgroundPanel.SetActive(true);
         modalIntroduction.SetActive(true);
