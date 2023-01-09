@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e048a1a173ad2649a77797964c6ebb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  simpleSprite: {fileID: 21300000, guid: c4af26a76e83adc49a4ead354098c98a, type: 3}
   sprites:
   - {fileID: 21300000, guid: c2bd2b83d2c3fc04e84d6144d0ed249f, type: 3}
   - {fileID: 21300000, guid: 4d7277d4e3099d14687f89076388261b, type: 3}

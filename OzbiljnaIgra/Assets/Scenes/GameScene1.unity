@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 4993954}
   m_Layer: 5
   m_Name: DIstanceBackgroundImage
-  m_TagString: Untagged
+  m_TagString: tagDescription
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -602,7 +602,7 @@ GameObject:
   - component: {fileID: 261333328}
   m_Layer: 0
   m_Name: Speed
-  m_TagString: Untagged
+  m_TagString: tagDescription
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1382,6 +1382,7 @@ GameObject:
   - component: {fileID: 395548333}
   - component: {fileID: 395548343}
   - component: {fileID: 395548344}
+  - component: {fileID: 395548345}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1487,6 +1488,18 @@ MonoBehaviour:
   modalPowerStation: {fileID: 2139109227}
   backgroundPanel: {fileID: 1623794967}
   player: {fileID: 1949151410}
+--- !u!114 &395548345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395548332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff56c0e4456b294999ae83e3e43eb0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &401589269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,7 +1846,7 @@ GameObject:
   - component: {fileID: 511936550}
   m_Layer: 5
   m_Name: ConsumptionBackgroundImage
-  m_TagString: Untagged
+  m_TagString: tagDescription
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2853,7 +2866,7 @@ GameObject:
   - component: {fileID: 744196938}
   m_Layer: 0
   m_Name: Time
-  m_TagString: Untagged
+  m_TagString: tagDescription
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2988,7 +3001,7 @@ GameObject:
   - component: {fileID: 776776518}
   m_Layer: 0
   m_Name: Distance
-  m_TagString: Untagged
+  m_TagString: tagDescription
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3455,7 +3468,7 @@ GameObject:
   - component: {fileID: 928128214}
   m_Layer: 5
   m_Name: BatteryBackgroundImage
-  m_TagString: Untagged
+  m_TagString: tagDescription
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5297,7 +5310,7 @@ GameObject:
   - component: {fileID: 1277669973}
   m_Layer: 5
   m_Name: SpeedBackgroundImage
-  m_TagString: Untagged
+  m_TagString: tagDescription
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6300,7 +6313,7 @@ GameObject:
   - component: {fileID: 1552086408}
   m_Layer: 0
   m_Name: Consumption
-  m_TagString: Untagged
+  m_TagString: tagDescription
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6629,7 +6642,7 @@ GameObject:
   - component: {fileID: 1633644877}
   m_Layer: 5
   m_Name: TimeBackgroundImage
-  m_TagString: Untagged
+  m_TagString: tagDescription
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7309,7 +7322,7 @@ GameObject:
   - component: {fileID: 1797780197}
   m_Layer: 0
   m_Name: city
-  m_TagString: Untagged
+  m_TagString: tagBackground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7651,6 +7664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a28e26dbc90eda4e8f0522fd7810ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  simpleSprite: {fileID: 21300000, guid: d93b8809ff51cc54d985c9cde3d0baa4, type: 3}
   maxSpeed: 7
   minSpeed: 5
   moveSpeed: 5
@@ -7975,7 +7989,7 @@ GameObject:
   - component: {fileID: 2055741131}
   m_Layer: 0
   m_Name: Battery
-  m_TagString: Untagged
+  m_TagString: tagDescription
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

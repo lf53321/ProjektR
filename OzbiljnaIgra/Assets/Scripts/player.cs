@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-
+    public Sprite simpleSprite;
     public float maxSpeed = 7f;
     public float minSpeed = 5f;
     public float moveSpeed = 5f;
@@ -40,6 +40,10 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        if (PlayerPrefs.GetFloat("Simplified") == 1)
+        {
+            this.GetComponent<SpriteRenderer>().sprite = simpleSprite;
+        }
         Time.timeScale = 0;
         powerValue = 58.0f;
         distanceText.text = distanceValue.ToString() + "/100km";

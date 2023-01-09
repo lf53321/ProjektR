@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class carScript : MonoBehaviour
 {
+    public Sprite simpleSprite;
     public Sprite[] sprites;
     private SpriteRenderer SpriteRenderer;
     public float speed = 5f;
@@ -15,7 +16,14 @@ public class carScript : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody2D>();
         SpriteRenderer = this.GetComponent<SpriteRenderer>();
-        SpriteRenderer.sprite = sprites[Random.Range(0,sprites.Length)];
+        if (PlayerPrefs.GetFloat("Simplified") == 1)
+        {
+            SpriteRenderer.sprite = simpleSprite;
+        }
+        else
+        {
+            SpriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)];
+        }
         rb.velocity = new Vector2(0, -speed);
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
     }
