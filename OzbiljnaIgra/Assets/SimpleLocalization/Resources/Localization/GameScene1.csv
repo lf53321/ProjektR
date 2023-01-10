@@ -3,6 +3,41 @@ gameScene1.Tutorial,Tutorial,Vodič
 gameScene1.Continue,Continue,Nastavi
 gameScene1.Intro,"Welcome to Voltaway!
  
+
 In this serious game we will do our best to try to teach you the basics concepts of electronic vehicles (commonly refered to as EV).","Dobrodošli u Voltaway!
+
  
-U ovoj ozbiljnoj igri potrudit ćemo se naučiti vas osnovne koncepte o električnim vozilima (poznatim kao EV)."
+U ovoj ozbiljnoj igri potrudit ćemo se naučiti Vas osnovne koncepte o električnim vozilima (poznatim kao EV)."
+gameScene1.Stats,"First things first, your statistics. 
+
+They can be seen on the right of the screen and are as follows:
+
+• time - current time that has passed
+
+• battery - your battery level
+
+• distance - how much you have to go until the end
+
+• speed - how fast you're going
+
+• consumption - how much of your battery you're consuming
+","Prvo nešto o vašoj statistici.
+
+Statistiku možete vidjeti na desnoj strani ekrana sljedećim redoslijedom:
+
+• vrijeme - trenutno vrijeme koje je proteklo
+
+• baterija - vaša razina baterije
+
+• udaljenost - udaljenost do cilja
+
+• brzina - koliko brzo se krećete
+
+• potrošnja - koliko baterije trošite
+"
+gameScene1.Goal,"The goal of the game is simple. You are a driver in an electric vehicle (EV).
+
+And you want to get to your desired distance as quickly as possible.","Cilj igre je jednostavan. 
+
+Vi ste vozač u električnom vozilu (EV). Želite proći zadanu udaljenost u što kraćem vremenskom roku."
+gameScene1.Power,,Ovo je stanica za punjenje. Ona će vam napuniti bateriju ali morat ćete potrošiti određeno vrijeme.

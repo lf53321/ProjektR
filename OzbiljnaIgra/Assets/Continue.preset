@@ -9,7 +9,7 @@ Preset:
   m_Name: Continue
   m_TargetType:
     m_NativeTypeID: 114
-    m_ManagedTypePPtr: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
     m_ManagedTypeFallback: 
   m_Properties:
   - target: {fileID: 0}
@@ -30,15 +30,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_Color.r
-    value: 1
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_Color.g
-    value: 1
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_Color.b
-    value: 1
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_Color.a
@@ -73,343 +73,55 @@ Preset:
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_text
-    value: Continue
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_isRightToLeft
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontAsset
+    propertyPath: m_FontData.m_Font
     value: 
-    objectReference: {fileID: 11400000, guid: a7c4d6a38f571294f860242a7a8ed6fb, type: 2}
+    objectReference: {fileID: 12800000, guid: 0013d186f6773a343a06831240de3730, type: 3}
   - target: {fileID: 0}
-    propertyPath: m_sharedMaterial
-    value: 
-    objectReference: {fileID: 3904851144643525026, guid: a7c4d6a38f571294f860242a7a8ed6fb, type: 2}
-  - target: {fileID: 0}
-    propertyPath: m_fontSharedMaterials.Array.size
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontMaterial
-    value: 
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontMaterials.Array.size
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColor32.rgba
-    value: 4281479730
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColor.r
-    value: 0.19607843
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColor.g
-    value: 0.19607843
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColor.b
-    value: 0.19607843
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColor.a
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_enableVertexGradient
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_colorMode
-    value: 3
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.topLeft.r
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.topLeft.g
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.topLeft.b
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.topLeft.a
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.topRight.r
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.topRight.g
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.topRight.b
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.topRight.a
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.bottomLeft.r
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.bottomLeft.g
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.bottomLeft.b
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.bottomLeft.a
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.bottomRight.r
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.bottomRight.g
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.bottomRight.b
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradient.bottomRight.a
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontColorGradientPreset
-    value: 
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_spriteAsset
-    value: 
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_tintAllSprites
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_StyleSheet
-    value: 
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_TextStyleHashCode
-    value: -1183493901
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_overrideHtmlColors
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_faceColor.rgba
-    value: 4294967295
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontSize
+    propertyPath: m_FontData.m_FontSize
     value: 24
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_fontSizeBase
-    value: 24
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontWeight
-    value: 400
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_enableAutoSizing
+    propertyPath: m_FontData.m_FontStyle
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_fontSizeMin
-    value: 18
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontSizeMax
-    value: 72
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_fontStyle
+    propertyPath: m_FontData.m_BestFit
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_HorizontalAlignment
+    propertyPath: m_FontData.m_MinSize
     value: 2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_VerticalAlignment
-    value: 512
+    propertyPath: m_FontData.m_MaxSize
+    value: 40
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_textAlignment
-    value: 65535
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_characterSpacing
+    propertyPath: m_FontData.m_Alignment
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_wordSpacing
+    propertyPath: m_FontData.m_AlignByGeometry
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_lineSpacing
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_lineSpacingMax
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_paragraphSpacing
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_charWidthMaxAdj
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_enableWordWrapping
+    propertyPath: m_FontData.m_RichText
     value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_wordWrappingRatios
-    value: 0.4
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_overflowMode
+    propertyPath: m_FontData.m_HorizontalOverflow
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_linkedTextComponent
-    value: 
+    propertyPath: m_FontData.m_VerticalOverflow
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: parentLinkedComponent
-    value: 
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_enableKerning
+    propertyPath: m_FontData.m_LineSpacing
     value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_enableExtraPadding
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: checkPaddingRequired
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_isRichText
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_parseCtrlCharacters
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_isOrthographic
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_isCullingEnabled
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_horizontalMapping
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_verticalMapping
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_uvLineOffset
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_geometrySortingOrder
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_IsTextObjectScaleStatic
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_VertexBufferAutoSizeReduction
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_useMaxVisibleDescender
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_pageToDisplay
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_margin.x
-    value: -1.0372925
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_margin.y
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_margin.z
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_margin.w
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_isUsingLegacyAnimationComponent
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_isVolumetricText
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_hasFontAssetChanged
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_baseMaterial
-    value: 
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_maskOffset.x
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_maskOffset.y
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_maskOffset.z
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_maskOffset.w
-    value: 0
+    propertyPath: m_Text
+    value: Continue
     objectReference: {fileID: 0}
   m_ExcludedProperties: []
