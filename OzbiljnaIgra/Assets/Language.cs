@@ -9,8 +9,40 @@ public class Language : MonoBehaviour
 
         LocalizationManager.Read();
 
-    
-        LocalizationManager.Language = "Hrvatski";
+        if (PlayerPrefs.HasKey("Language")){
+            switch (PlayerPrefs.GetString("Language"))
+            {
+                case "HR":
+                    {
+                        LocalizationManager.Language = "Hrvatski";
+                        break;
+                    }
+                case "EN":
+                    {
+                        LocalizationManager.Language = "English";
+                        break;
+                    }
+            }
+        }
+    }
 
+    public static void switchLang()
+    {
+        if (PlayerPrefs.HasKey("Language"))
+        {
+            switch (PlayerPrefs.GetString("Language"))
+            {
+                case "HR":
+                    {
+                        LocalizationManager.Language = "Hrvatski";
+                        break;
+                    }
+                case "EN":
+                    {
+                        LocalizationManager.Language = "English";
+                        break;
+                    }
+            }
+        }
     }
 }
