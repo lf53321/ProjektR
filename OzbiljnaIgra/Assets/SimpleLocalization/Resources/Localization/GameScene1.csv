@@ -4,7 +4,7 @@ gameScene1.Continue,Continue,Nastavi
 gameScene1.Intro,"Welcome to Voltaway!
  
 
-In this serious game we will do our best to try to teach you the basics concepts of electronic vehicles (commonly refered to as EV).","Dobrodošli u Voltaway!
+In this serious game we will do our best to try to teach you the basics concepts of electric vehicles (commonly refered to as EV).","Dobrodošli u Voltaway!
 
  
 U ovoj ozbiljnoj igri potrudit ćemo se naučiti Vas osnovne koncepte o električnim vozilima (poznatim kao EV)."
@@ -40,4 +40,4 @@ gameScene1.Goal,"The goal of the game is simple. You are a driver in an electric
 And you want to get to your desired distance as quickly as possible.","Cilj igre je jednostavan. 
 
 Vi ste vozač u električnom vozilu (EV). Želite proći zadanu udaljenost u što kraćem vremenskom roku."
-gameScene1.Power,,Ovo je stanica za punjenje. Ona će vam napuniti bateriju ali morat ćete potrošiti određeno vrijeme.
+gameScene1.Power,"This is a charging station. It will recharge your battery, but you will have to spend some time.",Ovo je stanica za punjenje. Ona će vam napuniti bateriju ali morat ćete potrošiti određeno vrijeme.
