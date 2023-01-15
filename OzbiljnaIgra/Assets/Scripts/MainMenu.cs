@@ -108,4 +108,8 @@ public class MainMenu : MonoBehaviour {
             PlayerPrefs.SetString("Language", "HR");
         }
     }
+
+    public void SetFullScreen(bool isFullScreen) {
+        Screen.fullScreen = isFullScreen;
+    }
 }
