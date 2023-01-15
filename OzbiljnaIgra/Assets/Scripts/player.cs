@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
     {
         if (powerValue <= 0f)
         {
-            screenScript.gameOver(time);
+            screenScript.gameOver(time, false);
             gameObject.SetActive(false);
             Time.timeScale = 0;
         }
@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
     {
         if (distanceValue >= distanceThreshold)
         {
-            screenScript.gameOver(powerValue * distanceValue - time);
+            screenScript.gameOver(powerValue * distanceValue - time, true);
             gameObject.SetActive(false);
             Time.timeScale = 0;
         }
@@ -162,7 +162,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("hit");
             Debug.Log(collision.gameObject.name);
-            screenScript.gameOver(powerValue * distanceValue - distanceThreshold - time);
+            screenScript.gameOver(powerValue * distanceValue - distanceThreshold - time, false);
             gameObject.SetActive(false);
             Time.timeScale = 0;
         }

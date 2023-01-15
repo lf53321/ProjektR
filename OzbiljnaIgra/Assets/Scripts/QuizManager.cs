@@ -100,6 +100,17 @@ public class QuizManager : MonoBehaviour
             quizScreen.SetActive(false);
             scoreScreen.SetActive(true);
 
+            if(correct == MAX_QUESTIONS) {
+                TextMeshProUGUI title = scoreScreen.transform.Find("GameOverTitle").gameObject.GetComponent<TextMeshProUGUI>();
+                title.text = "YOU WON!";
+
+                GameObject trophyLeft = scoreScreen.transform.Find("TrophyLeft").gameObject;
+                GameObject trophyRight = scoreScreen.transform.Find("TrophyRight").gameObject;
+
+                trophyLeft.SetActive(true);
+                trophyRight.SetActive(true);
+            }
+
             string ss = correct + "/" + MAX_QUESTIONS;
             Debug.Log("Score: " + ss);
             Debug.Log("End of quiz!");

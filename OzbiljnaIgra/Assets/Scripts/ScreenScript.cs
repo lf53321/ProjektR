@@ -31,10 +31,22 @@ public class ScreenScript : MonoBehaviour
         //}
     }
 
-    public void gameOver(float score)
+    public void gameOver(float score, bool isWin)
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+
+        if(isWin) {
+            TextMeshProUGUI title = screen.transform.Find("GameOverTitle").gameObject.GetComponent<TextMeshProUGUI>();
+            title.text = "YOU WON!";
+
+            GameObject trophyLeft = screen.transform.Find("TrophyLeft").gameObject;
+            GameObject trophyRight = screen.transform.Find("TrophyRight").gameObject;
+
+            trophyLeft.SetActive(true);
+            trophyRight.SetActive(true);
+        }
+
         screen.SetActive(true);
         textMeshProUGUI.text = score.ToString("0.0").Replace(',','.');
     }
