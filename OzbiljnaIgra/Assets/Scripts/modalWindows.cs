@@ -9,6 +9,10 @@ public class modalWindows : MonoBehaviour
     public GameObject modalStatistics;
     public GameObject modalGoal;
     public GameObject modalPowerStation;
+    public GameObject modal2Intro;
+    public GameObject modal2Gameplay;
+    public GameObject modal3Gameplay;
+
 
      public void pokreniIntroduction(){
         backgroundPanel.SetActive(true);
@@ -29,6 +33,27 @@ public class modalWindows : MonoBehaviour
         backgroundPanel.SetActive(false);
         modalGoal.SetActive(false);
         modalPowerStation.SetActive(false);
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked; 
+    }
+
+    public void pokreni2Gameplay(){
+        modal2Intro.SetActive(false);
+        modal2Gameplay.SetActive(true);
+    }
+
+    public void start2Igre(){
+        backgroundPanel.SetActive(false);
+        modal2Gameplay.SetActive(false);
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked; 
+    }
+
+    public void start3Igre(){
+        backgroundPanel.SetActive(false);
+        modal3Gameplay.SetActive(false);
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked; 

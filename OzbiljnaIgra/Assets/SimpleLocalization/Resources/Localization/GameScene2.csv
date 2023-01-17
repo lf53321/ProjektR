@@ -1,13 +1,17 @@
 Key,English,Hrvatski,English.Simple,Hrvatski.Simple
-gameScene2.Tutorial,Tutorial,Vodič,,
-gameScene2.Continue,Continue,Nastavi,,
-gameScene2.Info,"Electric cars are amazing in almost every aspect than a normal, ICV is. They do not emit CO2 and they are a longterm invest and will come out cheaper than ICV's.
+gameScene2.Tutorial,Tutorial,Vodič,Tutorial,Vodič
+gameScene2.Continue,Continue,Nastavi,Continue,Nastavi
+gameScene2.Info,"Electric cars are amazing in almost every aspect than a normal, ICV is. They do not emit CO2 and they are a long term investment and will come out cheaper than ICV's.
 
-However, there still are some issues we have with EV's. Mainly that they produce electric waste (i.e. used batteries) and charging spots aren't often found in rural areas.","Električni automobili su nevjerojatni u gotovo svakom aspektu od normalnih automobila, ICV-a. Ne emitiraju CO2 i dugoročna su investicija te će biti jeftiniji od ICV-a.
+However, there still are some issues we have with EV's. Mainly that they produce electronic waste (i.e. used batteries) and charging spots aren't often found in rural areas.","Električni automobili su nevjerojatni u gotovo svakom aspektu od normalnih automobila, ICV-a. Ne emitiraju CO2 i dugoročna su investicija te će biti jeftiniji od ICV-a.
 
-Međutim, još uvijek imamo nekih problema s električnim vozilima. Uglavnom zato što proizvode električni otpad (tj. iskorištene baterije) i mjesta za punjenje se ne nalaze često u ruralnim područjima.",,
-gameScene2.Country,"Seems we've exited the town and are now in the country side consequently there will be fewer charging stations.
+Međutim, još uvijek imamo nekih problema s električnim vozilima. Uglavnom zato što proizvode električni otpad (tj. iskorištene baterije) i mjesta za punjenje se ne nalaze često u ruralnim područjima.","EV mean no CO2 production and long term investment.
+
+But also they produce electric waste (batteries) and don't have a lot of charing spots outside of towns.","EV znači bez proizvodnje CO2 i dugoročna ulaganja.
+
+Ali nažalost proizvode električni otpad (baterije) i nemaju puno mjesta za punjenje izvan gradova."
+gameScene2.Country,"Seems we've exited the town and are now in the countryside consequently there will be fewer charging stations.
 
 Keep an eye out for your battery levels!","Čini se da smo izašli iz grada i sada smo na selu, stoga će biti manje stanica za punjenje.
 
-Pripazite na razinu baterije!",,
+Pripazite na razinu baterije!",Countryside means fewer charging stations in this level!,Selo znači manje stanica za punjenje na ovoj razini!
