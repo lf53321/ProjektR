@@ -1,13 +1,13 @@
-Key,English,Hrvatski
-gameScene1.Tutorial,Tutorial,Vodič
-gameScene1.Continue,Continue,Nastavi
+Key,English,Hrvatski,English.Simple,Hrvatski.Simple
+gameScene1.Tutorial,Tutorial,Vodič,Tutorial,Vodič
+gameScene1.Continue,Continue,Nastavi,Continue,Nastavi
 gameScene1.Intro,"Welcome to EVolve!
  
 
 In this serious game we will do our best to try to teach you the basics concepts of electric vehicles (commonly refered to as EV).","Dobrodošli u EVolve!
 
  
-U ovoj ozbiljnoj igri potrudit ćemo se naučiti Vas osnovne koncepte o električnim vozilima (poznatim kao EV)."
+U ovoj ozbiljnoj igri potrudit ćemo se naučiti Vas osnovne koncepte o električnim vozilima (poznatim kao EV).",EV = Electric vehicle,EV = Električno vozilo
 gameScene1.Stats,"First things first, your statistics. 
 
 They can be seen on the right of the screen and are as follows:
@@ -34,10 +34,46 @@ Statistiku možete vidjeti na desnoj strani ekrana sljedećim redoslijedom:
 • brzina - koliko brzo se krećete
 
 • potrošnja - koliko baterije trošite
-"
+","Stats:
+
+• time 
+
+• battery
+
+• distance
+
+• speed 
+
+• consumption","Statistika:
+
+• vrijeme 
+
+• baterija
+
+• udaljenost
+
+• brzina
+
+• potrošnja"
 gameScene1.Goal,"The goal of the game is simple. You are a driver in an electric vehicle (EV).
 
 And you want to get to your desired distance as quickly as possible.","Cilj igre je jednostavan. 
 
-Vi ste vozač u električnom vozilu (EV). Želite proći zadanu udaljenost u što kraćem vremenskom roku."
-gameScene1.Power,"This is a charging station. It will recharge your battery, but you will have to spend some time.",Ovo je stanica za punjenje. Ona će vam napuniti bateriju ali morat ćete potrošiti određeno vrijeme.
+Vi ste vozač u električnom vozilu (EV). Želite proći zadanu udaljenost u što kraćem vremenskom roku.",Goal: you want to get to your desired distance as quickly as possible.,Cilj: želite proći zadanu udaljenost u što kraćem vremenskom roku.
+gameScene1.Power,"This is a charging station. It will recharge your battery, but you will have to spend some time.",Ovo je stanica za punjenje. Ona će vam napuniti bateriju ali morat ćete potrošiti određeno vrijeme.,This is a charging station will recharge your battery at a time cost.,Stanica za punjenje koja puni bateriju za neko vrijeme.
+gameScene1.Win,You won!,Pobijedili ste!,You won!,Pobijedili ste!
+gameScene1.Lose,You lost!,Izgubili ste!,You lost!,Izgubili ste!
+gameScene1.Story,"In this game, we've simulated the maximum distance an EV can drive, which is about 350 km / 220 miles.
+
+We are starting our journey in Zagreb, Croatia and our next stop is Székesfehérvár in Hungary.","U ovoj smo igri simulirali najveću udaljenost koju EV može prijeći, a to je oko 350 km / 220 milja.
+
+Naše putovanje započinjemo u Zagrebu, u Hrvatskoj, a naša sljedeća postaja je Székesfehérvár u Mađarskoj.","EV - max. range about 220 miles / 350 km
+
+First stop - Székesfehérvár, HU","EV - maks. domet oko 220 milja / 350 km
+
+Prva postaja - Székesfehérvár, HU"
+gameScene1.Time,Time:,Vrijeme:,Time:,Vrijeme:
+gameScene1.Battery,Battery:,Baterija:,Battery:,Baterija:
+gameScene1.Distance,Distance:,Udaljenost:,Distance:,Udaljenost:
+gameScene1.Speed,Speed:,Brzina:,Speed:,Brzina:
+gameScene1.Consumption,Consumption:,Potrošnja:,Consumption:,Potrošnja:

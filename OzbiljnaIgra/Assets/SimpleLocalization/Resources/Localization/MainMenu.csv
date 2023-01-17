@@ -1,7 +1,7 @@
-Key,English,Hrvatski
-Menu.Title,Main Menu,Glavni Izbornik
-Menu.Play,Play,Igraj
-Menu.Load,Load Game,Učitaj Razinu
-Menu.Settings,Settings ,Postavke
-Menu.Credits,Credits,Zaslužnost
-Menu.Quit,Quit,Izađi
+Key,English,Hrvatski,English.Simple,Hrvatski.Simple
+Menu.Title,Main Menu,Glavni Izbornik,Main Menu,Glavni Izbornik
+Menu.Play,Play,Igraj,Play,Igraj
+Menu.Load,Load Game,Učitaj Razinu,Load Game,Učitaj Razinu
+Menu.Settings,Settings ,Postavke,Settings ,Postavke
+Menu.Credits,Credits,Zaslužnost,Credits,Zaslužnost
+Menu.Quit,Quit,Izađi,Quit,Izađi

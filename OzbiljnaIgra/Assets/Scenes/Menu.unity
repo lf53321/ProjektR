@@ -4392,8 +4392,6 @@ MonoBehaviour:
     Id: 1446378567
   - Name: Quiz
     Id: 357331095
-  - Name: LevelSelection
-    Id: 845701344
   - Name: GameScene1
     Id: 1381850322
   - Name: GameScene2

@@ -1,7 +1,7 @@
-Key,English,Hrvatski
-Settings.Title,Settings,Postavke
-Settings.Volume,Volume,Glasnoća
-Settings.Screen,Full Screen,Puni Zaslon
-Settings.Simple,Simplified,Pojednostavljeno
-Settings.Language,Language,Jezik
-Settings.Back,Back,Natrag
+Key,English,Hrvatski,English.Simple,Hrvatski.Simple
+Settings.Title,Settings,Postavke,Settings,Postavke
+Settings.Volume,Volume,Glasnoća,Volume,Glasnoća
+Settings.Screen,Full Screen,Puni Zaslon,Full Screen,Puni Zaslon
+Settings.Simple,Simplified,Pojednostavljeno,Simplified,Pojednostavljeno
+Settings.Language,Language,Jezik,Language,Jezik
+Settings.Back,Back,Natrag,Back,Natrag

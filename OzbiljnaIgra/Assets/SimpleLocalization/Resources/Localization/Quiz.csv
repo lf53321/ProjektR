@@ -1,8 +1,12 @@
-Key,English,Hrvatski
-Quiz.Score,Score,Bodovi
-Quiz.Q1,,
-Quiz.A11,,
-Quiz.A12,,
-Quiz.A13,,
-Quiz.A14,,
-Quiz.Q2,,
+Key,English,Hrvatski,English.Simple,Hrvatski.Simple
+Quiz.Win,You won!,Pobijedili ste!,,
+Quiz.Lose,You lost! ,Izgubili ste!,,
+Quiz.True,TRUE,Istina,,
+Quiz.False,FALSE,Laž,,
+Quiz.Score,Score,Bodovi,,
+Quiz.Q1,,,,
+Quiz.A11,,,,
+Quiz.A12,,,,
+Quiz.A13,,,,
+Quiz.A14,,,,
+Quiz.Q2,,,,

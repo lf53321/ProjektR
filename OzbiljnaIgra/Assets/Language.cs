@@ -14,12 +14,20 @@ public class Language : MonoBehaviour
             {
                 case "HR":
                     {
-                        LocalizationManager.Language = "Hrvatski";
+                        if(PlayerPrefs.GetFloat("Simplified") != 1){
+                            LocalizationManager.Language = "Hrvatski";
+                            break;}
+                        
+                        LocalizationManager.Language = "Hrvatski.Simple";
                         break;
                     }
                 case "EN":
-                    {
-                        LocalizationManager.Language = "English";
+                    {   
+                        if(PlayerPrefs.GetFloat("Simplified") != 1){
+                                LocalizationManager.Language = "English";
+                                break;}
+
+                        LocalizationManager.Language = "English.Simple";
                         break;
                     }
             }
@@ -34,12 +42,20 @@ public class Language : MonoBehaviour
             {
                 case "HR":
                     {
-                        LocalizationManager.Language = "Hrvatski";
+                        if(PlayerPrefs.GetFloat("Simplified") != 1){
+                            LocalizationManager.Language = "Hrvatski";
+                            break;}
+                        
+                        LocalizationManager.Language = "Hrvatski.Simple";
                         break;
                     }
                 case "EN":
-                    {
-                        LocalizationManager.Language = "English";
+                    {   
+                        if(PlayerPrefs.GetFloat("Simplified") != 1){
+                                LocalizationManager.Language = "English";
+                                break;}
+
+                        LocalizationManager.Language = "English.Simple";
                         break;
                     }
             }

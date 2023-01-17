@@ -1,13 +1,13 @@
-Key,English,Hrvatski
-gameScene2.Tutorial,Tutorial,Vodič
-gameScene2.Continue,Continue,Nastavi
+Key,English,Hrvatski,English.Simple,Hrvatski.Simple
+gameScene2.Tutorial,Tutorial,Vodič,,
+gameScene2.Continue,Continue,Nastavi,,
 gameScene2.Info,"Electric cars are amazing in almost every aspect than a normal, ICV is. They do not emit CO2 and they are a longterm invest and will come out cheaper than ICV's.
 
 However, there still are some issues we have with EV's. Mainly that they produce electric waste (i.e. used batteries) and charging spots aren't often found in rural areas.","Električni automobili su nevjerojatni u gotovo svakom aspektu od normalnih automobila, ICV-a. Ne emitiraju CO2 i dugoročna su investicija te će biti jeftiniji od ICV-a.
 
-Međutim, još uvijek imamo nekih problema s električnim vozilima. Uglavnom zato što proizvode električni otpad (tj. iskorištene baterije) i mjesta za punjenje se ne nalaze često u ruralnim područjima."
+Međutim, još uvijek imamo nekih problema s električnim vozilima. Uglavnom zato što proizvode električni otpad (tj. iskorištene baterije) i mjesta za punjenje se ne nalaze često u ruralnim područjima.",,
 gameScene2.Country,"Seems we've exited the town and are now in the country side consequently there will be fewer charging stations.
 
 Keep an eye out for your battery levels!","Čini se da smo izašli iz grada i sada smo na selu, stoga će biti manje stanica za punjenje.
 
-Pripazite na razinu baterije!"
+Pripazite na razinu baterije!",,
