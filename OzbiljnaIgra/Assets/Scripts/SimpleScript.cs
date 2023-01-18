@@ -12,9 +12,9 @@ public class SimpleScript : MonoBehaviour
             GameObject.FindGameObjectWithTag("tagBackground").SetActive(false);
             GameObject snow = GameObject.FindGameObjectWithTag("tagSnow");
             if(snow != null) snow.SetActive(false);
-            foreach(GameObject o in GameObject.FindGameObjectsWithTag("tagDescription")){
-                o.SetActive(false);
-            }
+            // foreach(GameObject o in GameObject.FindGameObjectsWithTag("tagDescription")){
+            //     o.SetActive(false);
+            // }
         }
     }
 

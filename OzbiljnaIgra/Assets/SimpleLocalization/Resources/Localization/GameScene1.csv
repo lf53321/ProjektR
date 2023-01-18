@@ -77,3 +77,7 @@ gameScene1.Battery,Battery:,Baterija:,Battery:,Baterija:
 gameScene1.Distance,Distance:,Udaljenost:,Distance:,Udaljenost:
 gameScene1.Speed,Speed:,Brzina:,Speed:,Brzina:
 gameScene1.Consumption,Consumption:,Potrošnja:,Consumption:,Potrošnja:
+gameScene1.PlayAgain,Play again,Igraj ponovo,Play again,Igraj ponovo
+gameScene1.NextLevel,Next level,Sljedeća razina,Next level,Sljedeća razina
+gameScene1.QuitGame,Quit game,Izađi iz igre,Quit game,Izađi iz igre
+gameScene1.Score,Score:,Bodovi:,Score:,Bodovi:
