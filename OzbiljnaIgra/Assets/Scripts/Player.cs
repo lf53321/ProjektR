@@ -103,9 +103,8 @@ public class Player : MonoBehaviour
     {
         if(moveSpeed != 0 && chargingBackgroundImage.activeInHierarchy)
         {
-            generatePowerStation.respawnTime = Random.Range(15f, 30f);
-            chargingBackgroundImage.SetActive(false);
             chargingText.text = "";
+            chargingBackgroundImage.SetActive(false);
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {

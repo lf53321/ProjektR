@@ -28,7 +28,7 @@ public class generateCars : MonoBehaviour
     {
         if (respawnTime > 0.3f)
         {
-            respawnTime -= 0.1f;
+            respawnTime -= 0.05f;
         }
     }
 

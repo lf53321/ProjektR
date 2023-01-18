@@ -1366,6 +1366,8 @@ MonoBehaviour:
   powerStation: {fileID: 3393101129559565076, guid: 86c940be9e1834945bd7078dd95619ef, type: 3}
   respawnTime: 0
   prozorZaBateriju: 0
+  lowerBound: 15
+  upperBound: 30
   modalPowerStation: {fileID: 2139109227}
   backgroundPanel: {fileID: 1623794967}
   player: {fileID: 1949151415}
@@ -7060,6 +7062,8 @@ MonoBehaviour:
   powerStation: {fileID: 3393101129559565076, guid: 86c940be9e1834945bd7078dd95619ef, type: 3}
   respawnTime: 0
   prozorZaBateriju: 0
+  lowerBound: 15
+  upperBound: 30
   modalPowerStation: {fileID: 2139109227}
   backgroundPanel: {fileID: 1623794967}
   player: {fileID: 0}

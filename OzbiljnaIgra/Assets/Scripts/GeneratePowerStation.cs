@@ -9,6 +9,8 @@ public class GeneratePowerStation : MonoBehaviour
     public float respawnTime;
     private Vector2 screenBounds;
     public bool prozorZaBateriju = false;
+    public float lowerBound = 15f;
+    public float upperBound = 30f;
 
     public GameObject modalPowerStation;
     public GameObject backgroundPanel;
@@ -18,7 +20,7 @@ public class GeneratePowerStation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        respawnTime = Random.Range(10f, 25f);
+        respawnTime = Random.Range(lowerBound, upperBound);
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(cars());
     }
