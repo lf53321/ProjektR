@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
     public float consumptionValue = 20f;
     public float minConsumption = 20f;
     public float maxConsumption = 35f;
+    public AudioSource chargingSound;
+    public AudioSource chargedSound;
+    public AudioSource criticalBatterySound;
 
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI powerText;
@@ -83,6 +86,10 @@ public class Player : MonoBehaviour
             gameObject.SetActive(false);
             Time.timeScale = 0;
         }
+        if (powerValue < 15f)
+        {
+            criticalBatterySound.Play();
+        }
         powerValue -= consumptionValue / 60;
         powerText.text = string.Format("{0:F1}", powerValue) + " kWh";
     }
@@ -140,6 +147,7 @@ public class Player : MonoBehaviour
     {
         if (powerValue <= 52.0f)
         {
+            chargingSound.Play();
             chargingBackgroundImage.SetActive(true);
             chargingText.text = "Charging!";
             powerValue += 6;
@@ -150,6 +158,7 @@ public class Player : MonoBehaviour
             time += 5f;
             chargingText.text = "Fully charged!";
             CancelInvoke("Charging");
+            chargedSound.Play();
         }
         time += 5f;
     }
