@@ -8,6 +8,7 @@ public class modalWindows : MonoBehaviour
     public GameObject modalIntroduction;
     public GameObject modalStatistics;
     public GameObject modalGoal;
+    public GameObject modalStory;
     public GameObject modalPowerStation;
     public GameObject modal2Intro;
     public GameObject modal2Gameplay;
@@ -29,9 +30,14 @@ public class modalWindows : MonoBehaviour
         modalGoal.SetActive(true);
     }
 
+    public void pokreniStory(){
+        modalGoal.SetActive(false);
+        modalStory.SetActive(true);
+    }
+
     public void startIgre(){
         backgroundPanel.SetActive(false);
-        modalGoal.SetActive(false);
+        modalStory.SetActive(false);
         modalPowerStation.SetActive(false);
         Time.timeScale = 1;
         Cursor.visible = false;

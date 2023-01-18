@@ -9,6 +9,7 @@ TagManager:
   - tagBackground
   - tagSnow
   - tagDescription
+  - glavniLokMan
   layers:
   - Default
   - TransparentFX

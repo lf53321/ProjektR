@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class ScreenScript : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ScreenScript : MonoBehaviour
 
     public TextMeshProUGUI textMeshProUGUI;
     public GameObject modalWindowActive;
+    public Text title;
 
     // Start is called before the first frame update
     void Start()
@@ -37,15 +39,24 @@ public class ScreenScript : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
 
         if(isWin) {
-            TextMeshProUGUI title = screen.transform.Find("GameOverTitle").gameObject.GetComponent<TextMeshProUGUI>();
-            title.text = "YOU WON!";
+            //TextMeshProUGUI title = screen.transform.Find("GameOverTitle").gameObject.GetComponent<TextMeshProUGUI>();
+            
+            if(PlayerPrefs.GetString("Language") != "HR")
+                title.text = "You won!";
+            else
+                title.text = "Pobjeda!";
 
             GameObject trophyLeft = screen.transform.Find("TrophyLeft").gameObject;
             GameObject trophyRight = screen.transform.Find("TrophyRight").gameObject;
 
             trophyLeft.SetActive(true);
             trophyRight.SetActive(true);
-        }
+        }   else {
+                if(PlayerPrefs.GetString("Language") != "HR")
+                    title.text = "You lost!";
+                else
+                    title.text = "Izgubili ste!";
+            }
 
         screen.SetActive(true);
         textMeshProUGUI.text = score.ToString("0.0").Replace(',','.');

@@ -14,6 +14,7 @@ public class QuizManager : MonoBehaviour
     public Text answerButton3;
     public Text answerButton4;
     public TextMeshProUGUI scoreValue;
+    public Text title;
 
     public GameObject quizScreen;
     public GameObject scoreScreen;
@@ -56,10 +57,10 @@ public class QuizManager : MonoBehaviour
                              "Što se događa sa potrošnjom baterije prilikom ubrzavanja?",
                              "Što se događa sa potrošnjom baterije u hladnim uvjetima?",
                              "Je li moguće voziti električni automobil po kiši ili snijegu?",
-                             "Je li moguće puniti električni automobil po kiši ili snijegu",
+                             "Je li moguće puniti električni automobil po kiši ili snijegu?",
                              "Koja je najveća prepreka kod EV?", //Charging the batteries
-                             "Koje probleme EV rješavaju?", //eliminating exhaust emissions
-                             "Koje probleme EV rješavaju", // they are very quiet
+                             "Koji problem EV rješava?", //eliminating exhaust emissions
+                             "Koji problem EV rješava?", // they are very quiet
                              "Koji je najveći strah kod vozača EV?" // the range anxiety
                         };
     string[][] answerListsHR = new string[][]
@@ -157,14 +158,22 @@ public class QuizManager : MonoBehaviour
             scoreScreen.SetActive(true);
 
             if(correct == MAX_QUESTIONS) {
-                TextMeshProUGUI title = scoreScreen.transform.Find("GameOverTitle").gameObject.GetComponent<TextMeshProUGUI>();
-                title.text = "YOU WON!";
+                // Text title = scoreScreen.transform.Find("GameOverTitle").gameObject.GetComponent<Text>();
+                if(PlayerPrefs.GetString("Language") != "HR")
+                    title.text = "You won!";
+                else
+                    title.text = "Pobijedili ste!";
 
                 GameObject trophyLeft = scoreScreen.transform.Find("TrophyLeft").gameObject;
                 GameObject trophyRight = scoreScreen.transform.Find("TrophyRight").gameObject;
 
                 trophyLeft.SetActive(true);
                 trophyRight.SetActive(true);
+            } else {
+                if(PlayerPrefs.GetString("Language") != "HR")
+                    title.text = "You lost!";
+                else
+                    title.text = "Izgubili ste!";
             }
 
             string ss = correct + "/" + MAX_QUESTIONS;

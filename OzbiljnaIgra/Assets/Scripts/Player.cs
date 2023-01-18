@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using Assets.SimpleLocalization;
 
 
 public class Player : MonoBehaviour
@@ -27,7 +29,7 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI distanceText;
     public TextMeshProUGUI speedText;
     public TextMeshProUGUI consumptionText;
-    public TextMeshProUGUI chargingText;
+    public Text chargingText;
 
     public GameObject chargingBackgroundImage;
     public GeneratePowerStation generatePowerStation;
@@ -144,19 +146,19 @@ public class Player : MonoBehaviour
     }
 
     void Charging()
-    {
+    {   
         if (powerValue <= 52.0f)
         {
-            chargingSound.Play();
+            chargingText.text = Assets.SimpleLocalization.LocalizationManager.Localize("gameScene1.Charging");
             chargingBackgroundImage.SetActive(true);
-            chargingText.text = "Charging!";
+            chargingSound.Play();
             powerValue += 6;
         }
         else
         {
             powerValue = 58.0f;
             time += 5f;
-            chargingText.text = "Fully charged!";
+            chargingText.text = Assets.SimpleLocalization.LocalizationManager.Localize("gameScene1.FullyCharged");
             CancelInvoke("Charging");
             chargedSound.Play();
         }
@@ -170,7 +172,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("hit");
             Debug.Log(collision.gameObject.name);
-            screenScript.gameOver(powerValue * distanceValue - distanceThreshold - time, false);
+            screenScript.gameOver((powerValue * distanceValue - distanceThreshold - time) < 0 ? 0 : (powerValue * distanceValue - distanceThreshold - time),  false);
             gameObject.SetActive(false);
             Time.timeScale = 0;
         }

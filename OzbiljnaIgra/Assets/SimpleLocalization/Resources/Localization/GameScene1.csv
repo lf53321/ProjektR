@@ -57,21 +57,21 @@ Statistiku možete vidjeti na desnoj strani ekrana sljedećim redoslijedom:
 • potrošnja"
 gameScene1.Goal,"The goal of the game is simple. You are a driver in an electric vehicle (EV).
 
-And you want to get to your desired distance as quickly as possible.","Cilj igre je jednostavan. 
+And you want to get to your desired distance as quickly as possible and avoid the other cars!","Cilj igre je jednostavan. 
 
-Vi ste vozač u električnom vozilu (EV). Želite proći zadanu udaljenost u što kraćem vremenskom roku.",Goal: you want to get to your desired distance as quickly as possible.,Cilj: želite proći zadanu udaljenost u što kraćem vremenskom roku.
+Vi ste vozač u električnom vozilu (EV). Želite proći zadanu udaljenost u što kraćem vremenskom roku i pritom izbjegavati ostala vozila!",Goal: you want to get to your desired distance as quickly as possible and avoid other cars.,Cilj: želite proći zadanu udaljenost u što kraćem vremenskom roku i izbjegavati druga vozila.
 gameScene1.Power,"This is a charging station. It will recharge your battery, but you will have to spend some time.",Ovo je stanica za punjenje. Ona će vam napuniti bateriju ali morat ćete potrošiti određeno vrijeme.,This is a charging station will recharge your battery at a time cost.,Stanica za punjenje koja puni bateriju za neko vrijeme.
 gameScene1.Win,You won!,Pobijedili ste!,You won!,Pobijedili ste!
 gameScene1.Lose,You lost!,Izgubili ste!,You lost!,Izgubili ste!
 gameScene1.Story,"In this game, we've simulated the maximum distance an EV can drive, which is about 350 km / 220 miles.
 
-We are starting our journey in Zagreb, Croatia and our next stop is Székesfehérvár in Hungary.","U ovoj smo igri simulirali najveću udaljenost koju EV može prijeći, a to je oko 350 km / 220 milja.
+We are starting our journey in Zagreb, Croatia and our next stop is the Hungarian border.","U ovoj smo igri simulirali najveću udaljenost koju EV može prijeći, a to je oko 350 km / 220 milja.
 
-Naše putovanje započinjemo u Zagrebu, u Hrvatskoj, a naša sljedeća postaja je Székesfehérvár u Mađarskoj.","EV - max. range about 220 miles / 350 km
+Naše putovanje započinjemo u Zagrebu, u Hrvatskoj, a naša sljedeća postaja je mađarska granica.","EV - max. range about 220 miles / 350 km
 
-First stop - Székesfehérvár, HU","EV - maks. domet oko 220 milja / 350 km
+First stop - Border, HU","EV - maks. domet oko 220 milja / 350 km
 
-Prva postaja - Székesfehérvár, HU"
+Prva postaja - Granica, HU"
 gameScene1.Time,Time:,Vrijeme:,Time:,Vrijeme:
 gameScene1.Battery,Battery:,Baterija:,Battery:,Baterija:
 gameScene1.Distance,Distance:,Udaljenost:,Distance:,Udaljenost:
@@ -81,3 +81,7 @@ gameScene1.PlayAgain,Play again,Igraj ponovo,Play again,Igraj ponovo
 gameScene1.NextLevel,Next level,Sljedeća razina,Next level,Sljedeća razina
 gameScene1.QuitGame,Quit game,Izađi iz igre,Quit game,Izađi iz igre
 gameScene1.Score,Score:,Bodovi:,Score:,Bodovi:
+gameScene1.Menu,Menu,Glavni izbornik,Menu,Glavni izbornik
+gameScene1.Resume,Resume,Nastavi,Resume,Nastavi
+gameScene1.Charging,Charging,Punjenje,Charging,Punjenje
+gameScene1.FullyCharged,Fully charged!,Napunjeno do kraja!,Fully charged!,Napunjeno do kraja!
