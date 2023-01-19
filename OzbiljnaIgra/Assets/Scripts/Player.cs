@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     public float maxSpeed = 7f;
     public float minSpeed = 5f;
     public float moveSpeed = 5f;
-    public float powerValue = 58.0f;
+    public float powerValue = 58f;
     public float distanceValue = 0f;
     public float distanceThreshold = 113f;
     public float speedValue = 60f;
@@ -50,7 +50,6 @@ public class Player : MonoBehaviour
             this.GetComponent<SpriteRenderer>().sprite = simpleSprite;
         }
         Time.timeScale = 0;
-        powerValue = 58.0f;
         distanceText.text = distanceValue.ToString() + "/100km";
         speedText.text = speedValue.ToString() + "km/h";
         consumptionText.text = consumptionValue.ToString() + "kWh";
@@ -114,6 +113,7 @@ public class Player : MonoBehaviour
         {
             chargingText.text = "";
             chargingBackgroundImage.SetActive(false);
+            generatePowerStation.respawnTime = Random.Range(25f, 50f);
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -146,7 +146,12 @@ public class Player : MonoBehaviour
     }
 
     void Charging()
-    {   
+    {
+        if (moveSpeed > 0)
+        {
+            CancelInvoke("Charging");
+            return;
+        }
         if (powerValue <= 52.0f)
         {
             chargingText.text = Assets.SimpleLocalization.LocalizationManager.Localize("gameScene1.Charging");

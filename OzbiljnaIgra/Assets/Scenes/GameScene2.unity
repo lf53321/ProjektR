@@ -3976,6 +3976,7 @@ MonoBehaviour:
   modalIntroduction: {fileID: 248090079}
   modalStatistics: {fileID: 0}
   modalGoal: {fileID: 0}
+  modalStory: {fileID: 0}
   modalPowerStation: {fileID: 0}
   modal2Intro: {fileID: 248090079}
   modal2Gameplay: {fileID: 1695910759}
@@ -4207,6 +4208,7 @@ MonoBehaviour:
   modalIntroduction: {fileID: 1695910759}
   modalStatistics: {fileID: 0}
   modalGoal: {fileID: 0}
+  modalStory: {fileID: 0}
   modalPowerStation: {fileID: 0}
   modal2Intro: {fileID: 0}
   modal2Gameplay: {fileID: 1695910759}
@@ -6366,7 +6368,7 @@ MonoBehaviour:
   maxSpeed: 7
   minSpeed: 5
   moveSpeed: 5
-  powerValue: 100
+  powerValue: 58
   distanceValue: 0
   distanceThreshold: 180
   speedValue: 100

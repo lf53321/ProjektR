@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 68
+  controlID: 97
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 377
     height: 570
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -434,7 +434,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: b4e5fffffae5ffff0ae7ffff1ae7ffff2ae7ffff3ce7ffff52e7ffff9ef1ffff6cf2ffffa6f3ffff42f4ffff92f7ffff6ef8ffff36fbffff
+      m_ExpandedIDs: fad4ffff40d5ffff50d6ffff62d6ffff74d6ffff88d6ffffa2d6ffff9ed8ffffe4d8fffff0d9fffffed9ffff0cdaffff1cdaffff32daffff3adbffffcedbffff60dcffffe8dcffff6eddffff3cdeffff4efaffff36fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -804,36 +804,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 51
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: 51
   m_LastProjectPath: C:\Users\Luka\Documents\GitHub\ProjektR\OzbiljnaIgra
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0c5d0000
-    m_LastClickedID: 23820
-    m_ExpandedIDs: 00000000f45c0000f65c0000f85c000000ca9a3b
+    m_SelectedIDs: 925c0000
+    m_LastClickedID: 23698
+    m_ExpandedIDs: 00000000765c0000785c00007a5c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Scenes
-      m_OriginalName: Scenes
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 23820
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -847,7 +847,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f45c0000f65c0000f85c0000
+    m_ExpandedIDs: 00000000765c0000785c00007a5c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

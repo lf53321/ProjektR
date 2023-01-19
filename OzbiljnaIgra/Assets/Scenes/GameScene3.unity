@@ -2186,6 +2186,7 @@ MonoBehaviour:
   modalIntroduction: {fileID: 1352017493}
   modalStatistics: {fileID: 0}
   modalGoal: {fileID: 0}
+  modalStory: {fileID: 0}
   modalPowerStation: {fileID: 0}
   modal2Intro: {fileID: 0}
   modal2Gameplay: {fileID: 0}
@@ -10901,7 +10902,7 @@ MonoBehaviour:
   speedValue: 60
   consumptionValue: 24
   minConsumption: 24
-  maxConsumption: 35
+  maxConsumption: 40
   chargingSound: {fileID: 672543694}
   chargedSound: {fileID: 119564915}
   criticalBatterySound: {fileID: 1099203815}
