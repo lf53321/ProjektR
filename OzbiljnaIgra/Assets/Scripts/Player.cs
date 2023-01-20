@@ -115,7 +115,7 @@ public class Player : MonoBehaviour
             chargingBackgroundImage.SetActive(false);
             generatePowerStation.respawnTime = Random.Range(25f, 50f);
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             if (moveSpeed < maxSpeed)
             {
